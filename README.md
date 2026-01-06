@@ -1,29 +1,16 @@
-# Anime-Tracker
+# React + Vite
 
-A React-based web application that allows users to browse anime, track what they are watching, and manage a list of favorite anime. Anime data is fetched from an external API, and user data is persisted locally.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Features
-- Browse anime using an external API (Jikan / MyAnimeList)
-- Add and remove anime from favorites
-- Track watching status:
-  - Watching
-  - Completed
-  - Plan to Watch
-- Persistent data using localStorage
-- Responsive and clean UI
+Currently, two official plugins are available:
 
-## Tech Stack
-- Frontend: React (JavaScript)
-- Styling: Tailwind CSS
-- API: Jikan API (MyAnimeList unofficial API)
-- Routing: React Router
-- State Management: React Context + Hooks
-- Storage: Browser localStorage
-- Build Tool: Vite
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Architecture Overview
-- Pages handle routing and high-level logic
-- Reusable components (AnimeCard, AnimeList) handle UI rendering
-- Global state (favorites and watch status) is managed via React Context
-- API fetching occurs at the page level
-- Local storage ensures data persists across page refreshes
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
