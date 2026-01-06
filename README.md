@@ -1,16 +1,45 @@
-# React + Vite
+# Anime-Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React web app for browsing anime and keeping a personal list of favorites and watch statuses. Anime data comes from the **Jikan API** (unofficial MyAnimeList API), and your lists persist locally using **localStorage**.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Browse anime via Jikan / MyAnimeList data
+- Add / remove anime from **Favorites**
+- Track watch status:
+  - Watching
+  - Completed
+  - Plan to Watch
+- Persistent data (localStorage)
+- Responsive, clean UI
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend:** React (JavaScript)
+- **Styling:** Tailwind CSS
+- **Routing:** React Router
+- **State:** React Context + Hooks
+- **API:** Jikan API (MyAnimeList unofficial)
+- **Storage:** Browser localStorage
+- **Build Tool:** Vite
 
-## Expanding the ESLint configuration
+## Architecture Overview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Pages** handle routing and high-level logic
+- **Components** (e.g., `AnimeCard`, `AnimeList`) handle UI rendering
+- **Global state** (favorites + watch status) is managed via React Context
+- **API fetching** happens at the page level
+- **localStorage** keeps data across refreshes
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (LTS recommended)
+
+### Install & Run
+
+```bash
+npm install
+npm run dev
+```
