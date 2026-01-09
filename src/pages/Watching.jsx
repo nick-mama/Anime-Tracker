@@ -1,5 +1,9 @@
 function Watching() {
-  return <div>Watching Page</div>;
+  return (
+    <>
+      <h2 className="title">Watching Page</h2>
+    </>
+  );
 }
 
 export default Watching;
